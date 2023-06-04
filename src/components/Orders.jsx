@@ -3,6 +3,12 @@ import { useMemo } from "react";
 import useActions from "../hooks/useActions";
 import useOrders from "../hooks/useOrders";
 import usePrototypes from "../hooks/usePrototypes";
+import Checkout from "../pages/Checkout";
+
+import Home from "../pages/Home";
+import Links from "../components/Links"
+
+import { Link } from "react-router-dom";
 
 export default function Orders() {
   const orders = useOrders();
@@ -71,12 +77,17 @@ export default function Orders() {
               <i className="icon icon--delete" />
             </button>
           </div>
-          <button
-            className="btn btn--secondary"
+        
+          <div className="btn__area2">
+          
+          <Link to="/checkout">
+              <button className="btn btn--secondary"
             style={{ width: "100%", marginTop: 10 }}
-          >
-            Checkout
-          </button>
+            >
+  checkout</button>
+  </Link>
+
+          </div>
         </div>
       </div>
     </aside>
